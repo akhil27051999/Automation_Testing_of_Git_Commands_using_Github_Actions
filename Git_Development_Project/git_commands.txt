@@ -1,40 +1,43 @@
 # INSTALL GIT REPOSITORY
 
-# Update the advance package tool
+# Update the advanced package tool
 sudo apt update
 
 # Install git
-sudo apt install git 
+sudo apt install -y git 
 
 # Check git version
 git --version
 
-# To set account default identity
+# Set account default identity
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
 
 # SET UP GIT REPOSITORY
 
-# Create and Change to a Directory
-mkdir git_project && cd git_project
+# Create and change to a Directory
+mkdir -p git_project
+cd git_project
 
-# Initial git in that folder
+# Initialize git in that folder
 git init
 
 # Create a file
-touch first_file
+touch first_file.txt
 
-# Check the git status
+# Add content to file
+echo "first file in first branch" >> first_file.txt
+
+# Check git status
 git status
 
 # Add the file and check the status
 git add first_file.txt
-echo "first file in first branch" >> first_file.txt
 git status
 
 # Commit the added file
-git commit -m "message"
+git commit -m "Initial commit"
 
 
 # BRANCH MANAGEMENT
@@ -54,23 +57,10 @@ git branch
 # Shortcut to create and checkout to a new branch
 git checkout -b new_branch
 
-# Create a file in branch and commit it
+# Create a file in the new branch and commit it
 echo "New file in New branch" >> new_file.txt
-git add .
-git commit -m "Added new file"
+git add new_file.txt
+git commit -m "Added new file in new_branch"
 
-# Merging files from one branch to another
+# Merging files from one branch to another (example: merge master into new_branch)
 git merge master
-
-
-
-
-
-
-
-
-
-
-
-
-
