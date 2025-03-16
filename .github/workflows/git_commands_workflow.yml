@@ -1,0 +1,40 @@
+name: Run Git Commands and Build/Test
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  run-commands:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Display Git version
+        run: git --version
+
+      - name: Read and run commands from git_commands.txt
+        run: |
+          echo "Executing git_commands.txt..."
+          chmod +x git_commands.txt || true  # Just in case it’s already executable
+          while IFS= read -r cmd; do
+            if [[ ! -z "$cmd" && ! "$cmd" =~ ^# ]]; then
+              echo "Running command: $cmd"
+              eval "$cmd"
+            fi
+          done < git_commands.txt
+
+      - name: Build Step (example)
+        run: |
+          echo "Building project..."
+          # Replace below with your real build command
+          echo "Build step placeholder"
+
+      - name: Test Step (example)
+        run: |
+          echo "Running tests..."
+          # Replace below with your real test command
+          echo "Test step placeholder"
