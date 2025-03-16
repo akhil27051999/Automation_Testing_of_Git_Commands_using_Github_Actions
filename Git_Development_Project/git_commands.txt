@@ -9,7 +9,7 @@ sudo apt install git
 # Check git version
 git --version
 
-To set account default identity
+# To set account default identity
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
