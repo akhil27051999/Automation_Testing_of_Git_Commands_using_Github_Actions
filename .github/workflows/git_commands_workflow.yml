@@ -24,8 +24,8 @@ jobs:
       - name: Run Commands from git_commands.txt
         run: |
           echo "=== Executing Git Commands from git_commands.txt ==="
-          mkdir git_test_workspace
-          cd git_test_workspace
+          mkdir git_development_project
+          cd git_development_project
 
           while IFS= read -r line || [[ -n "$line" ]]; do
             # Skip empty lines and comments
