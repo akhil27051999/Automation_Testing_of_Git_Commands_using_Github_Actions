@@ -3,7 +3,7 @@ name: Run Git Commands and Build/Test
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   run-commands:
@@ -16,25 +16,66 @@ jobs:
       - name: Display Git version
         run: git --version
 
-      - name: Read and run commands from git_commands.txt
+      - name: Install Git and Setup Repository
         run: |
-          echo "Executing git_commands.txt..."
-          chmod +x git_commands.txt || true  # Just in case it’s already executable
-          while IFS= read -r cmd; do
-            if [[ ! -z "$cmd" && ! "$cmd" =~ ^# ]]; then
-              echo "Running command: $cmd"
-              eval "$cmd"
-            fi
-          done < git_commands.txt
+          # INSTALL GIT REPOSITORY
 
-      - name: Build Step (example)
-        run: |
-          echo "Building project..."
-          # Replace below with your real build command
-          echo "Build step placeholder"
+          # Update the Advanced Package Tool
+          sudo apt update
 
-      - name: Test Step (example)
-        run: |
-          echo "Running tests..."
-          # Replace below with your real test command
-          echo "Test step placeholder"
+          # Install git
+          sudo apt install -y git
+
+          # Check git version
+          git --version
+
+          # Set account default identity
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+
+          # SET UP GIT REPOSITORY
+
+          # Create and change to a directory
+          mkdir git_project && cd git_project
+
+          # Initialize git in that folder
+          git init
+
+          # Create a file
+          touch first_file.txt
+
+          # Check git status
+          git status
+
+          # Add the file and check the status
+          git add first_file.txt
+          echo "first file in first branch" >> first_file.txt
+          git status
+
+          # Commit the added file
+          git commit -m "Initial commit"
+
+          # BRANCH MANAGEMENT
+
+          # Create a branch
+          git branch staging
+
+          # Checkout staging branch
+          git checkout staging
+
+          # Switch between branches
+          git switch master
+
+          # Check the current branch
+          git branch
+
+          # Shortcut to create and checkout a new branch
+          git checkout -b new_branch
+
+          # Create a file in the branch and commit it
+          echo "New file in new branch" >> new_file.txt
+          git add .
+          git commit -m "Added new file"
+
+          # Merge files from one branch to another
+          git merge master
