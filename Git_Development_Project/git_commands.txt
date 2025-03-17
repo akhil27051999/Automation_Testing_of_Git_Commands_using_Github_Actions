@@ -69,7 +69,7 @@ git merge master
 # TRACKING AND STAGING
 
 # To check status of a file
-git staus
+git status
 
 # VIEWING HISTORY
 
