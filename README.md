@@ -40,43 +40,46 @@ Automation-testing-of-git-commands/
 ```
 ## ✨ Sample Workflow File
 ```
-yaml
-name: Git Command Executor
+name: Run Git Commands and Build/Test from Git_Development_Project
 
 on:
   push:
-    paths:
-      - 'git_commands/git_commands.txt'
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
-  execute-git-commands:
+  run-git-commands:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Run Git Commands from File
+      - name: Display Git Version
+        run: git --version
+
+      - name: Install Git (if not available)
         run: |
-          echo "Executing Git Commands..."
-          FILE_PATH="git_commands/git_commands.txt"
-          if [ -f "$FILE_PATH" ]; then
-            while IFS= read -r cmd || [ -n "$cmd" ]; do
-              [[ -z "$cmd" || "$cmd" =~ ^#.* ]] && continue
-              echo "Command: $cmd"
-              echo "Output:"
-              eval "$cmd" 2>error.log | tee output.log
-              if [ -s error.log ]; then
-                echo "Error:"
-                cat error.log
-              else
-                echo "Command executed successfully."
-              fi
-              echo "-----------------------------"
-            done < "$FILE_PATH"
-          else
-            echo " File not found: $FILE_PATH"
-          fi
+          sudo apt update
+          sudo apt install -y git
+
+      - name: Run Git Commands from git_commands.txt inside Git_Development_Project
+        working-directory: ./Git_Development_Project
+        run: |
+          echo "=== Executing Git Commands from git_commands.txt ==="
+
+          while IFS= read -r line || [[ -n "$line" ]]; do
+            # Skip empty lines and comments
+            [[ -z "$line" || "$line" =~ ^# ]] && continue
+
+            echo ">> Running: $line"
+            eval "$line"
+
+            if [ $? -ne 0 ]; then
+              echo " Command failed: $line"
+              exit 1
+            fi
+          done < git_commands.txt
 
 ```
 ## 📜 Sample git_commands.txt
