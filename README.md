@@ -32,6 +32,7 @@ Automation-testing-of-git-commands/
 ```
 ## 🚦 Workflow Triggers
 ```
+
 | Trigger Type        | Description                                       |
 |---------------------|---------------------------------------------------|
 | `push`              | Automatically runs when `git_commands.txt` changes|
