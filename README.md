@@ -32,12 +32,11 @@ Automation-testing-of-git-commands/
 ```
 ## 🚦 Workflow Triggers
 ```
----------------------------------------------------------------------------
-| Trigger Type        | Description                                       |
-|---------------------|---------------------------------------------------|
-| `push`              | Automatically runs when `git_commands.txt` changes|
-| `workflow_dispatch` | Manually triggered from GitHub UI                 |
----------------------------------------------------------------------------
+
+| Trigger Type        | Description                                    |
+|---------------------|------------------------------------------------|
+| `push`              | When `.txt` command files are pushed or changed|
+| `workflow_dispatch` | Manual trigger from GitHub UI                  |
 
 ```
 ## ✨ Sample Workflow File
