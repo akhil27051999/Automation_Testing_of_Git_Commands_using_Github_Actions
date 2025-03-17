@@ -19,7 +19,6 @@ Automation-testing-of-git-commands/
 - `git_commands.txt`: A text file that holds all your Git commands (one per line).
 - `git_command_executor.yml`: GitHub Actions workflow that automates command execution.
 
----
 ```
 ## ⚙️ How It Works
 ```
@@ -30,7 +29,6 @@ Automation-testing-of-git-commands/
   4. Prints the output and error (if any) for each command.
   5. Displays the success or failure status for each command executed.
 
----
 ```
 ## 🚦 Workflow Triggers
 ```
@@ -39,7 +37,6 @@ Automation-testing-of-git-commands/
 | `push`              | Automatically runs when `git_commands.txt` changes|
 | `workflow_dispatch` | Manually triggered from GitHub UI                 |
 
----
 ```
 ## ✨ Sample Workflow File
 ```
