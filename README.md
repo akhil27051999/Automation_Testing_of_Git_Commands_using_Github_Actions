@@ -10,7 +10,7 @@ All commonly used Git commands are stored in a `.txt` file, and an automated Git
 ```
 Automation-testing-of-git-commands/ 
 ├── git_commands/ 
-│   ├── git_commands.txt 
+│   └── git_commands.txt 
 ├── .github/ 
 │   └── workflows/ 
 │      └── git_commands_workflow.yml
