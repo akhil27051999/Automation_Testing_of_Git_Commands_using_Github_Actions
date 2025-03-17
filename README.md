@@ -82,28 +82,32 @@ jobs:
 ```
 📜 Sample git_commands.txt
 
----
 
-txt
-Copy
-Edit
-# Git command execution examples
 git status
 git log --oneline
 git branch -a
 git remote -v
 You can add more commands or comment out commands temporarily using #.
+```
 
+```
 📌 Use Cases
 pgsql
 Copy
 Edit
+
+```
+
 🔍 Practice Git commands in a CI/CD environment.
 🧪 Test Git operations in isolation before using them in real workflows.
 📚 Learn Git while observing real-time output and behavior.
 ⚙️ Demonstrate automation skills using GitHub Actions.
 📊 Showcase in DevOps/Automation/CI-CD project portfolios.
+
+```
 🏁 Getting Started
+```
+
 pgsql
 Copy
 Edit
@@ -112,11 +116,16 @@ Edit
 🔀 Push changes to trigger the workflow automatically.
 ⚙️ Or go to GitHub Actions > Run Workflow to trigger manually.
 📊 View execution output and logs in the Actions tab.
+
+```
 🙌 Author
+```
 Akhil Thyadi
 GitHub: @akhil27051999
 
+```
 📜 License
+```
 This project is open source and available under the MIT License.
 
 yaml
