@@ -59,58 +59,49 @@ jobs:
 
       - name: Run Git Commands from File
         run: |
-          echo "🚀 Executing Git Commands..."
+          echo "Executing Git Commands..."
           FILE_PATH="git_commands/git_commands.txt"
           if [ -f "$FILE_PATH" ]; then
             while IFS= read -r cmd || [ -n "$cmd" ]; do
               [[ -z "$cmd" || "$cmd" =~ ^#.* ]] && continue
-              echo "🔸 Command: $cmd"
-              echo "🔽 Output:"
+              echo "Command: $cmd"
+              echo "Output:"
               eval "$cmd" 2>error.log | tee output.log
               if [ -s error.log ]; then
-                echo "❌ Error:"
+                echo "Error:"
                 cat error.log
               else
-                echo "✅ Command executed successfully."
+                echo "Command executed successfully."
               fi
               echo "-----------------------------"
             done < "$FILE_PATH"
           else
-            echo "❌ File not found: $FILE_PATH"
+            echo " File not found: $FILE_PATH"
           fi
 
 ```
-📜 Sample git_commands.txt
-
+## 📜 Sample git_commands.txt
+```
 
 git status
 git log --oneline
 git branch -a
 git remote -v
 You can add more commands or comment out commands temporarily using #.
-```
 
 ```
-📌 Use Cases
-pgsql
-Copy
-Edit
+## 📌 Use Cases
 
 ```
-
 🔍 Practice Git commands in a CI/CD environment.
 🧪 Test Git operations in isolation before using them in real workflows.
 📚 Learn Git while observing real-time output and behavior.
 ⚙️ Demonstrate automation skills using GitHub Actions.
 📊 Showcase in DevOps/Automation/CI-CD project portfolios.
+```
+## 🏁 Getting Started
 
 ```
-🏁 Getting Started
-```
-
-pgsql
-Copy
-Edit
 ✅ Fork or Clone the repository.
 📝 Add or modify Git commands in `git_commands.txt`.
 🔀 Push changes to trigger the workflow automatically.
@@ -118,23 +109,17 @@ Edit
 📊 View execution output and logs in the Actions tab.
 
 ```
-🙌 Author
+## 🙌 Author
 ```
 Akhil Thyadi
 GitHub: @akhil27051999
 
 ```
-📜 License
+## 📜 License
 ```
 This project is open source and available under the MIT License.
 
-yaml
-Copy
-Edit
 
----
-
-Would you like me to generate a ready-to-use repository template (including sample files and workflow YAML) for download or upload to your GitHub?
 
 
 
