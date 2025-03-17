@@ -64,3 +64,28 @@ git commit -m "Added new file in new_branch"
 
 # Merging files from one branch to another (example: merge master into new_branch)
 git merge master
+
+
+# TRACKING AND STAGING
+
+# To check status of a file
+git staus
+
+# VIEWING HISTORY
+
+# To check commit history
+git log
+
+# Filter logs by author 
+git log --author="YOur Name"
+
+# Filter logs by date 
+git log --since="2025-03-17"
+
+# Filter logs by grep
+git log --grep="changes"
+
+
+
+
+
