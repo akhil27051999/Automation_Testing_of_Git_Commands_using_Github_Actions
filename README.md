@@ -7,20 +7,22 @@ All commonly used Git commands are stored in a `.txt` file, and an automated Git
 ---
 
 ## 📆 Project Structure
+```
+Automation-testing-of-git-commands/ 
+├── git_commands/ 
+│   ├── git_commands.txt 
+├── .github/ 
+│   └── workflows/ 
+│      └── git_commands_workflow.yml
 
-Automation-testing-of-git-commands/ ├── git_commands/ │ ├── git_commands.txt ├── .github/ │ └── workflows/ │ └── git_command_executor.yml
-
-bash
-Copy
-Edit
 
 - `git_commands.txt`: A text file that holds all your Git commands (one per line).
 - `git_command_executor.yml`: GitHub Actions workflow that automates command execution.
 
 ---
-
+```
 ## ⚙️ How It Works
-
+```
 - When `git_commands.txt` is updated (via push) or the workflow is manually triggered:
   1. GitHub Actions reads each line in the `.txt` file.
   2. Skips blank lines and comments (lines starting with `#`).
@@ -29,19 +31,19 @@ Edit
   5. Displays the success or failure status for each command executed.
 
 ---
-
+```
 ## 🚦 Workflow Triggers
-
+```
 | Trigger Type        | Description                                       |
 |---------------------|---------------------------------------------------|
 | `push`              | Automatically runs when `git_commands.txt` changes|
 | `workflow_dispatch` | Manually triggered from GitHub UI                 |
 
 ---
-
+```
 ## ✨ Sample Workflow File
-
-```yaml
+```
+yaml
 name: Git Command Executor
 
 on:
