@@ -8,12 +8,13 @@ All commonly used Git commands are stored in a `.txt` file, and an automated Git
 
 ## 🏗️ Project Structure
 ```
-Automation-testing-of-git-commands/ 
+Automation-testing-of-git-commands/
+|
 ├── .github/ 
 │   └── workflows/ 
 │      └── git_commands_workflow.yml
-├── git_commands/ 
-│   └── git_commands.txt 
+└── git_commands/ 
+    └── git_commands.txt 
 
 - `git_commands.txt`: A text file that holds all your Git commands (one per line).
 - `git_commands_workflow.yml`: GitHub Actions workflow that automates command execution.
