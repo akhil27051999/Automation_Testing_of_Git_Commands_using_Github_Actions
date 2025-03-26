@@ -15,8 +15,16 @@ Automation-testing-of-git-commands/
 │      └── git_commands_workflow.yml
 └── git_commands/ 
     └── git_commands.txt 
-
 ```
+
+## 🏁 Getting Started
+
+- ✅ Fork or Clone the repository.
+- 📝 Add or modify Git commands in `git_commands.txt`.
+- 🔀 Push changes to trigger the workflow automatically.
+- ⚙️ Or go to GitHub Actions > Run Workflow to trigger manually.
+- 📊 View execution output and logs in the Actions tab.
+  
 ## ⚙️ How It Works
 
 When git_commands.txt is updated (via push) or the workflow is manually triggered:
@@ -43,15 +51,6 @@ When git_commands.txt is updated (via push) or the workflow is manually triggere
 - 📚 Learn Git while observing real-time output and behavior.
 - ⚙️ Demonstrate automation skills using GitHub Actions.
 - 📊 Showcase in DevOps/Automation/CI-CD project portfolios.
-
-## 🏁 Getting Started
-
-- ✅ Fork or Clone the repository.
-- 📝 Add or modify Git commands in `git_commands.txt`.
-- 🔀 Push changes to trigger the workflow automatically.
-- ⚙️ Or go to GitHub Actions > Run Workflow to trigger manually.
-- 📊 View execution output and logs in the Actions tab.
-
 
 ## ✍️ Author
 
