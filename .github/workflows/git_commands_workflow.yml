@@ -1,4 +1,4 @@
-name: Run Git Commands and Build/Test from Git_Development_Project
+name: CI - Build, Run and Test 
 
 on:
   push:
