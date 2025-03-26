@@ -1,20 +1,18 @@
 # 🚀 Automation Testing of Git Commands Using GitHub Actions
 
 This project demonstrates how **Git command execution can be automated and tested** in a CI/CD environment using **GitHub Actions** — a real-world scenario reflecting DevOps and Automation principles.
-
 All commonly used Git commands are stored in a `.txt` file, and an automated GitHub Actions workflow executes these commands whenever a change is pushed to the file or the workflow is manually triggered from the GitHub UI.
 
 ---
 
-## 📆 Project Structure
+## 🏗️ Project Structure
 ```
 Automation-testing-of-git-commands/ 
-├── git_commands/ 
-│   └── git_commands.txt 
 ├── .github/ 
 │   └── workflows/ 
 │      └── git_commands_workflow.yml
-
+├── git_commands/ 
+│   └── git_commands.txt 
 
 - `git_commands.txt`: A text file that holds all your Git commands (one per line).
 - `git_commands_workflow.yml`: GitHub Actions workflow that automates command execution.
@@ -22,7 +20,7 @@ Automation-testing-of-git-commands/
 ```
 ## ⚙️ How It Works
 ```
-- When `git_commands.txt` is updated (via push) or the workflow is manually triggered:
+When `git_commands.txt` is updated (via push) or the workflow is manually triggered:
   1. GitHub Actions reads each line in the `.txt` file.
   2. Skips blank lines and comments (lines starting with `#`).
   3. Executes each Git command inside a CI shell environment.
@@ -39,60 +37,7 @@ Automation-testing-of-git-commands/
 | `workflow_dispatch` | Manual trigger from GitHub UI                  |
 
 ```
-## ✨ Sample Workflow File
-```
-name: Run Git Commands and Build/Test from Git_Development_Project
 
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  run-git-commands:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Display Git Version
-        run: git --version
-
-      - name: Install Git (if not available)
-        run: |
-          sudo apt update
-          sudo apt install -y git
-
-      - name: Run Git Commands from git_commands.txt inside Git_Development_Project
-        working-directory: ./Git_Development_Project
-        run: |
-          echo "=== Executing Git Commands from git_commands.txt ==="
-
-          while IFS= read -r line || [[ -n "$line" ]]; do
-            # Skip empty lines and comments
-            [[ -z "$line" || "$line" =~ ^# ]] && continue
-
-            echo ">> Running: $line"
-            eval "$line"
-
-            if [ $? -ne 0 ]; then
-              echo " Command failed: $line"
-              exit 1
-            fi
-          done < git_commands.txt
-
-```
-## 📜 Sample git_commands.txt
-```
-
-git status
-git log --oneline
-git branch -a
-git remote -v
-You can add more commands or comment out commands temporarily using #.
-
-```
 ## 📌 Use Cases
 
 ```
@@ -112,7 +57,7 @@ You can add more commands or comment out commands temporarily using #.
 📊 View execution output and logs in the Actions tab.
 
 ```
-## 🙌 Author
+## ✍️ Author
 ```
 Akhil Thyadi
 GitHub: @akhil27051999
