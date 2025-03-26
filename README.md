@@ -1,6 +1,7 @@
 # 🚀 Automation Testing of Git Commands Using GitHub Actions
 
 This project demonstrates how **Git command execution can be automated and tested** in a CI/CD environment using **GitHub Actions** — a real-world scenario reflecting DevOps and Automation principles.
+
 All commonly used Git commands are stored in a `.txt` file, and an automated GitHub Actions workflow executes these commands whenever a change is pushed to the file or the workflow is manually triggered from the GitHub UI.
 
 ---
