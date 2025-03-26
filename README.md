@@ -20,7 +20,7 @@ Automation-testing-of-git-commands/
 - `git_commands_workflow.yml`: GitHub Actions workflow that automates command execution.
 
 ```
-⚙️ How It Works
+## ⚙️ How It Works
 
 When git_commands.txt is updated (via push) or the workflow is manually triggered:
   1. GitHub Actions reads each line in the .txt file.
