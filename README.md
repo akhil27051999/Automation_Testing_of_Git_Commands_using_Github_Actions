@@ -55,8 +55,8 @@ When git_commands.txt is updated (via push) or the workflow is manually triggere
 
 ## ✍️ Author
 
-Akhil Thyadi
-GitHub: [@akhil27051999](https://github.com/akhil27051999)
+- Akhil Thyadi
+- GitHub: [@akhil27051999](https://github.com/akhil27051999)
 
 
 ## 📜 License
