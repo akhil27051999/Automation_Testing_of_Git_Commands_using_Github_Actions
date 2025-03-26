@@ -29,7 +29,7 @@ When `git_commands.txt` is updated (via push) or the workflow is manually trigge
   4. Prints the output and error (if any) for each command.
   5. Displays the success or failure status for each command executed.
 
-```
+
 ## 🚦 Workflow Triggers
 ```
 ------------------------------------------------------------------------
@@ -43,13 +43,12 @@ When `git_commands.txt` is updated (via push) or the workflow is manually trigge
 
 ## 📌 Use Cases
 
-```
 🔍 Practice Git commands in a CI/CD environment.
 🧪 Test Git operations in isolation before using them in real workflows.
 📚 Learn Git while observing real-time output and behavior.
 ⚙️ Demonstrate automation skills using GitHub Actions.
 📊 Showcase in DevOps/Automation/CI-CD project portfolios.
-```
+
 ## 🏁 Getting Started
 
 ```
