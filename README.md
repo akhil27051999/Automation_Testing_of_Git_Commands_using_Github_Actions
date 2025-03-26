@@ -21,7 +21,7 @@ Automation-testing-of-git-commands/
 ```
 ## ⚙️ How It Works
 ```
-When 'git_commands.txt' is updated (via push) or the workflow is manually triggered:
+When `git_commands.txt` is updated (via push) or the workflow is manually triggered:
   1. GitHub Actions reads each line in the `.txt` file.
   2. Skips blank lines and comments (lines starting with `#`).
   3. Executes each Git command inside a CI shell environment.
