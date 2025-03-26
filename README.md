@@ -31,15 +31,13 @@ When git_commands.txt is updated (via push) or the workflow is manually triggere
 
 
 ## 🚦 Workflow Triggers
-```
+
 ------------------------------------------------------------------------
 | Trigger Type        | Description                                    |
 |---------------------|------------------------------------------------|
 | `push`              | When `.txt` command files are pushed or changed|
 | `workflow_dispatch` | Manual trigger from GitHub UI                  |
 ------------------------------------------------------------------------
-
-```
 
 ## 📌 Use Cases
 
