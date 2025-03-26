@@ -38,19 +38,19 @@ When git_commands.txt is updated (via push) or the workflow is manually triggere
 
 ## 📌 Use Cases
 
-1. 🔍 Practice Git commands in a CI/CD environment.
-2. 🧪 Test Git operations in isolation before using them in real workflows.
-3. 📚 Learn Git while observing real-time output and behavior.
-4. ⚙️ Demonstrate automation skills using GitHub Actions.
-5. 📊 Showcase in DevOps/Automation/CI-CD project portfolios.
+- 🔍 Practice Git commands in a CI/CD environment.
+- 🧪 Test Git operations in isolation before using them in real workflows.
+- 📚 Learn Git while observing real-time output and behavior.
+- ⚙️ Demonstrate automation skills using GitHub Actions.
+- 📊 Showcase in DevOps/Automation/CI-CD project portfolios.
 
 ## 🏁 Getting Started
 
-1. ✅ Fork or Clone the repository.
-2. 📝 Add or modify Git commands in `git_commands.txt`.
-3. 🔀 Push changes to trigger the workflow automatically.
-4. ⚙️ Or go to GitHub Actions > Run Workflow to trigger manually.
-5. 📊 View execution output and logs in the Actions tab.
+- ✅ Fork or Clone the repository.
+- 📝 Add or modify Git commands in `git_commands.txt`.
+- 🔀 Push changes to trigger the workflow automatically.
+- ⚙️ Or go to GitHub Actions > Run Workflow to trigger manually.
+- 📊 View execution output and logs in the Actions tab.
 
 
 ## ✍️ Author
