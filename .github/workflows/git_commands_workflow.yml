@@ -29,13 +29,17 @@ jobs:
           while IFS= read -r line || [[ -n "$line" ]]; do
             # Skip empty lines and comments
             [[ -z "$line" || "$line" =~ ^# ]] && continue
-
+            
+            # Print the command it’s about to run, for visibility/logging.
             echo ">> Running: $line"
             eval "$line"
-
+            # Execute the command. eval runs the content of the line as a shell command.
             if [ $? -ne 0 ]; then
               echo " Command failed: $line"
               exit 1
+             # If a command fails (i.e., exit code ≠ 0):
+             # It prints an error.
+             # And exits the script immediately with exit 1.
             fi
           done < git_commands.txt
 
